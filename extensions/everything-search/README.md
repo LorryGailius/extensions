@@ -2,7 +2,8 @@
 A powerful Raycast extension that integrates with Everything Search by voidtools to provide lightning-fast file system search and navigation on Windows. Transform your file discovery workflow with instant search results and comprehensive directory browsing capabilities.
 
 > **Attribution**: File search on servers ported from [anastasiy_safari/raycast-everything-ftp](https://github.com/anastasiuspernat/everything-search) <br>
-> **Attribution**: File search through CLI ported from [dougfernando/everything-raycast-extension](https://github.com/dougfernando/everything-raycast-extension)
+> **Attribution**: File search through CLI ported from [dougfernando/everything-raycast-extension](https://github.com/dougfernando/everything-raycast-extension) <br>
+> **Attribution**: Native node module port of the SDK from [LorryGailius/everything-search-sdk-node](https://github.com/LorryGailius/everything-search-sdk-node)<br>
 
 ## 📦 Prerequisites
 
@@ -58,6 +59,9 @@ Configure the servers in the extension settings using the following format:
   }
 ]
 ```
+
+## ⚠️ SDK Search (Experimental)
+The extension includes an experimental feature to utilize the Everything SDK module for searching. Eventually this will be swithced to be the default search method. If you experience any issues, please disable this option in the preferences and report the problem on GitHub.
 
 ## 📝 Notes
 The extension leverages Everything CLI's powerful search capabilities, so in theory, every `es.exe` command-line argument for filtering should work through the search interface.
