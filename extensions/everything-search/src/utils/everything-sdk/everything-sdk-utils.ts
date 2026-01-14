@@ -67,6 +67,26 @@ export function mapSortPreferenceToSDK(sortPreference: string): SortType {
       return SortType.DATE_ACCESSED_ASCENDING;
     case "-sort date-accessed-descending":
       return SortType.DATE_ACCESSED_DESCENDING;
+    case "-sort attributes-ascending":
+      return SortType.ATTRIBUTES_ASCENDING;
+    case "-sort attributes-descending":
+      return SortType.ATTRIBUTES_DESCENDING;
+    case "-sort file-list-file-name-ascending":
+      return SortType.FILE_LIST_FILENAME_ASCENDING;
+    case "-sort file-list-file-name-descending":
+      return SortType.FILE_LIST_FILENAME_DESCENDING;
+    case "-sort run-count-ascending":
+      return SortType.RUN_COUNT_ASCENDING;
+    case "-sort run-count-descending":
+      return SortType.RUN_COUNT_DESCENDING;
+    case "-sort date-recently-changed-ascending":
+      return SortType.DATE_RECENTLY_CHANGED_ASCENDING;
+    case "-sort date-recently-changed-descending":
+      return SortType.DATE_RECENTLY_CHANGED_DESCENDING;
+    case "-sort date-run-ascending":
+      return SortType.DATE_RUN_ASCENDING;
+    case "-sort date-run-descending":
+      return SortType.DATE_RUN_DESCENDING;
     default:
       return SortType.NAME_ASCENDING;
   }
