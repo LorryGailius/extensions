@@ -44,7 +44,7 @@ export async function searchFilesWithSDK(searchText: string, preferences: Prefer
   if (!searchText) {
     return [];
   }
-  
+
   if (!everythingSDK) {
     await showToast({
       style: Toast.Style.Failure,
@@ -63,7 +63,7 @@ export async function searchFilesWithSDK(searchText: string, preferences: Prefer
     const sortType = mapSortPreferenceToSDK(preferences.defaultSort);
     everythingSDK.setSort(sortType);
 
-    if(preferences.useRegex) {
+    if (preferences.useRegex) {
       everythingSDK.setRegex(true);
     }
 
@@ -116,13 +116,13 @@ export async function searchFilesWithSDK(searchText: string, preferences: Prefer
     return results;
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    
+
     await showToast({
       style: Toast.Style.Failure,
       title: "Error Searching Files",
       message: errorMessage,
     });
-    
+
     return [];
   }
 }

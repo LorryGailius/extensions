@@ -32,7 +32,7 @@ export async function searchFilesWithCLI(searchText: string, preferences: Prefer
 
     // Use es.exe with CSV output format to get file info in one call
     const command = `chcp 65001 > nul && "${esCommand}" -n ${maxResultsCount} -csv -name -filename-column -size -date-created -date-modified ${defaultSort}${options ? ` ${options}` : ""} ${searchQuery}`;
-    
+
     const { stdout } = await execAsync(command);
 
     const lines = stdout

@@ -84,7 +84,7 @@ export function SearchResult({ preferences, searchText, onSearchTextChange }: Se
             <FileActionPanel file={file} preferences={preferences} onToggleDetails={onToggleDetails}>
               {dirname(file.commandline) !== file.commandline && (
                 <Action.Push
-                  title="Navigate Up"
+                  title="Navigate Up" // eslint-disable-line @raycast/prefer-title-case
                   icon={Icon.ArrowUp}
                   target={
                     <DirectoryBrowser
