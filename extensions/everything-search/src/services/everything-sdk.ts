@@ -76,7 +76,7 @@ export async function searchFilesWithSDK(searchText: string, preferences: Prefer
 
     everythingSDK.setRequestFlags(requestFlags);
 
-    const success = everythingSDK.query(true);
+    const success = await everythingSDK.query(true);
 
     if (!success) {
       const errorCode = everythingSDK.getLastError();

@@ -26,7 +26,7 @@ export interface EverythingSDK {
   getRequestFlags(): number;
 
   // Execute query functions
-  query(wait?: boolean): boolean;
+  query(wait?: boolean): Promise<boolean>;
 
   // Read result state functions
   getNumFileResults(): number;
